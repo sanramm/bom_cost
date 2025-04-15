@@ -70,6 +70,6 @@ if uploaded_file:
     total = result_df["금액"].sum()
     st.success(f"💰 총 자재비(제조원가): {total:,.0f} 원")
 
-    # 단가출처 통계
+    # 단가출처 통계 (수정된 괄호)
     st.info("📌 단가출처 요약")
-    st.dataframe(result_df["단가출처"].value_counts().rename("건수").reset_index().rename(columns={"index": "단가출처"})))
+    st.dataframe(result_df["단가출처"].value_counts().rename("건수").reset_index().rename(columns={"index": "단가출처"}))
